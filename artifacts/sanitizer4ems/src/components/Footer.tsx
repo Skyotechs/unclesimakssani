@@ -1,23 +1,55 @@
 import React from "react";
 import { Link } from "wouter";
 import { Shield } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 export function Footer() {
   return (
     <footer className="bg-primary text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
-          
+
+          {/* Brand column */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Shield className="h-6 w-6 text-accent" strokeWidth={2.5} />
+              <div className="flex items-center justify-center w-8 h-8 rounded-md border border-accent/50">
+                <Shield className="h-5 w-5 text-accent" strokeWidth={2.5} />
+              </div>
               <span className="font-bold text-xl tracking-tight">Sanitizer4EMS</span>
             </div>
-            <p className="text-white/80 leading-relaxed pr-4 text-sm sm:text-base">
+            <p className="text-white/80 leading-relaxed pr-4 text-sm">
               Built by EMS personnel. Supporting volunteer ambulance squads one bottle at a time.
             </p>
+            {/* Social media placeholder links */}
+            <div className="flex items-center gap-4 pt-2">
+              <a
+                href="#"
+                aria-label="Facebook (coming soon)"
+                className="text-white/60 hover:text-white transition-colors"
+                data-testid="social-facebook"
+              >
+                <FaFacebookF className="h-4 w-4" />
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram (coming soon)"
+                className="text-white/60 hover:text-white transition-colors"
+                data-testid="social-instagram"
+              >
+                <FaInstagram className="h-4 w-4" />
+              </a>
+              <a
+                href="#"
+                aria-label="X / Twitter (coming soon)"
+                className="text-white/60 hover:text-white transition-colors"
+                data-testid="social-twitter"
+              >
+                <FaXTwitter className="h-4 w-4" />
+              </a>
+            </div>
           </div>
 
+          {/* Company links */}
           <div>
             <h3 className="text-sm font-semibold tracking-wider uppercase mb-4 text-white/90">Company</h3>
             <ul className="space-y-3">
@@ -29,6 +61,7 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Legal links */}
           <div>
             <h3 className="text-sm font-semibold tracking-wider uppercase mb-4 text-white/90">Legal</h3>
             <ul className="space-y-3">
@@ -40,9 +73,13 @@ export function Footer() {
           </div>
 
         </div>
+
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm text-center sm:text-left">
             © {new Date().getFullYear()} Sanitizer4EMS. All rights reserved.
+          </p>
+          <p className="text-white/40 text-xs text-center sm:text-right">
+            Social links are placeholders — profiles coming soon.
           </p>
         </div>
       </div>

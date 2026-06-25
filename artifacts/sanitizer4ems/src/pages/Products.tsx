@@ -54,11 +54,29 @@ const PRODUCTS: Product[] = [
 
 export default function Products() {
   const handleCheckout = async (priceId: string, quantity: number, type: "one-time" | "subscription") => {
-    toast.info("Stripe Checkout coming soon — product IDs will be finalized before launch.", {
-      description: `Attempted to checkout: ${priceId} (Qty: ${quantity}, ${type})`
-    });
-    // In a real app, you would call your backend to create a checkout session
-    // and then redirect to Stripe using stripe.redirectToCheckout
+    try {
+      const stripe = await stripePromise;
+      if (!stripe) {
+        toast.error("Stripe failed to load. Please try again.");
+        return;
+      }
+      // Redirect to Stripe Checkout with placeholder price IDs.
+      // Replace the priceId values in PRODUCTS with real Stripe price IDs before launch.
+      const result = await stripe.redirectToCheckout({
+        lineItems: [{ price: priceId, quantity }],
+        mode: type === "subscription" ? "subscription" : "payment",
+        successUrl: `${window.location.origin}/products?checkout=success`,
+        cancelUrl: `${window.location.origin}/products?checkout=cancelled`,
+      });
+      if (result.error) {
+        // Placeholder price IDs will cause an error from Stripe — show a friendly notice
+        toast.info("Stripe Checkout is not yet live — product IDs will be finalized before launch.", {
+          description: result.error.message,
+        });
+      }
+    } catch {
+      toast.info("Stripe Checkout is not yet live — product IDs will be finalized before launch.");
+    }
   };
 
   return (
