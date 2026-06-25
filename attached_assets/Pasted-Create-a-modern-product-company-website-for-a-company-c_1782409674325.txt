@@ -1,0 +1,161 @@
+Create a modern product/company website for a company called Sanitizer4EMS.
+
+Sanitizer4EMS is a sanitizer production company created and operated by EMS personnel who came together to solve a constant everyday problem: germs. The company produces and sells non-alcohol-based sanitizer products and sanitizer liquid for EMS agencies, urgent cares, schools, daycares, healthcare offices, public safety organizations, and families.
+
+The website should feel clean, professional, trustworthy, community-focused, and EMS-inspired.
+
+Logo:
+Use a placeholder logo area for now. The real logo will be attached later.
+
+Branding:
+No slogan or colors have been finalized yet, so create a clean default EMS-inspired visual identity using navy, white, red, light gray, and subtle medical/EMS design accents.
+
+Core mission:
+Sanitizer4EMS was created by EMS personnel to help organizations fight germs while supporting volunteer ambulance squads. The company plans to donate profits to volunteer ambulance squads. Volunteer ambulance squads can sign up as referral partners and receive a unique referral link. When customers purchase through that link, profits from those sales can be donated back to that agency.
+
+Website pages:
+
+1. Home Page
+    Create a strong homepage with:
+
+* Hero section
+* Headline: “Sanitizer Made by EMS Personnel”
+* Supporting text explaining that Sanitizer4EMS was created by EMS personnel to fight germs and support volunteer ambulance squads
+* CTA buttons:
+    * “Shop Products”
+    * “Join the Referral Program”
+    * “Contact Us”
+* Sections for:
+    * Built by EMS personnel
+    * Non-alcohol-based sanitizer solutions
+    * Products for EMS, urgent cares, schools, daycares, and public safety
+    * Supporting volunteer ambulance squads
+    * Subscriptions and easy reorders
+    * Bulk ordering
+
+2. About Us Page
+    Include:
+
+* The story of EMS personnel coming together to solve the ongoing germ exposure problem
+* Why the company was created
+* Who the products are for
+* The mission to support volunteer ambulance squads
+* A section explaining that agencies can become referral partners and receive donated profits from referred sales
+
+3. Products Page
+    Create a product page where customers can purchase products using Stripe Checkout.
+
+Product options:
+
+* 0.25 oz sanitizer
+* 2 oz sanitizer
+* 8 oz sanitizer
+* 1 gallon sanitizer liquid
+
+Each product card should include:
+
+* Product image placeholder
+* Product name
+* Size
+* Description
+* Price placeholder
+* One-time purchase option
+* Subscription/reorder option
+* Quantity selector
+* Buy Now button
+* Subscribe/Reorder button
+
+Stripe requirements:
+
+* Use Stripe Checkout
+* Use placeholder Stripe product/price IDs that can be replaced later
+* Shipping should be calculated through Stripe
+* Include support for one-time purchases and recurring subscriptions/reorders
+
+4. Referral Program Page
+    Create a referral program page for volunteer EMS agencies and volunteer ambulance squads.
+
+This page should explain:
+
+* Agencies can apply to become referral partners
+* Approved agencies receive a unique referral link
+* Customers may select an associated agency during checkout or use the agency’s referral link
+* Selecting an agency is optional, not required
+* Profits from referred sales can be donated back to the selected or referring agency
+
+Include an agency application form with:
+
+* Agency name
+* Contact person
+* Title/role
+* Email
+* Phone number
+* Agency address
+* Agency website
+* Agency social media links
+* Preferred referral code
+* Tax ID/EIN placeholder field
+* Upload document placeholder if needed later
+* Notes/message box
+* Submit application button
+
+5. FAQ Page
+    Create an FAQ page covering:
+
+* What is Sanitizer4EMS?
+* Who created the company?
+* Are the products alcohol-based?
+* Who are the products for?
+* Can agencies place bulk orders?
+* Are subscriptions or reorders available?
+* How does the referral program work?
+* Does a customer have to select an agency?
+* How are donations to volunteer ambulance squads handled?
+* How does shipping work?
+* How do urgent cares, schools, and daycares order?
+
+6. Contact Us Page
+    Create a contact page with:
+
+* General contact form
+* Bulk order inquiry form
+* Partnership inquiry option
+* School/daycare inquiry option
+* Urgent care/healthcare inquiry option
+
+Contact form fields:
+
+* Name
+* Organization
+* Email
+* Phone
+* Inquiry type dropdown
+* Message
+
+Technical requirements:
+
+* Use React or Next.js
+* Mobile responsive
+* Clean navigation bar and footer
+* Reusable components:
+    * Navbar
+    * Footer
+    * ProductCard
+    * ReferralApplicationForm
+    * ContactForm
+    * FAQAccordion
+    * CTASection
+* SEO-friendly headings, titles, and meta descriptions
+* Placeholder legal pages:
+    * Privacy Policy
+    * Terms of Service
+    * Refund Policy
+    * Shipping Policy
+* Include disclaimers that product claims, pricing, donation percentages, and legal language are placeholders and must be finalized before launch
+* Structure the project cleanly so products, Stripe IDs, prices, agency referral codes, and copy can be easily edited later
+
+Tone:
+Professional, trustworthy, EMS-to-EMS, community-first, clean, and simple.
+
+Final goal:
+Build a launch-ready Sanitizer4EMS website with shopping, subscriptions/reorders, Stripe checkout, referral agency applications, optional agency selection, FAQ, contact forms, and a mission-focused brand story.
