@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { Head } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
-import { Shield, Droplets, HeartHandshake, Building2, Package, RotateCcw } from "lucide-react";
+import { Droplets, HeartHandshake, Building2, Package, RotateCcw, ShieldCheck } from "lucide-react";
+import mascotImg from "@/assets/mascot.png";
 
 export default function Home() {
   const fadeUp = {
@@ -60,7 +61,7 @@ export default function Home() {
       {/* Trust Banner */}
       <section className="bg-secondary py-8 px-6 border-b border-border">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16 text-muted-foreground text-sm font-semibold tracking-wide uppercase text-center">
-          <span className="flex items-center gap-2"><Shield className="h-5 w-5" /> Non-Alcohol Formula</span>
+          <span className="flex items-center gap-2"><ShieldCheck className="h-5 w-5" /> Non-Alcohol Formula</span>
           <span className="flex items-center gap-2"><HeartHandshake className="h-5 w-5" /> Supports Volunteers</span>
           <span className="flex items-center gap-2"><Droplets className="h-5 w-5" /> Safe for All Settings</span>
         </div>
@@ -70,11 +71,12 @@ export default function Home() {
       <section className="py-24 px-6 sm:px-12 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}>
-            <div className="aspect-[4/3] bg-muted rounded-2xl flex items-center justify-center border border-border">
-              <span className="text-muted-foreground font-medium flex flex-col items-center gap-3">
-                <Shield className="h-12 w-12 opacity-50" />
-                [Placeholder: EMS Personnel in uniform]
-              </span>
+            <div className="aspect-[4/3] bg-muted rounded-2xl overflow-hidden border border-border flex items-center justify-center">
+              <img
+                src={mascotImg}
+                alt="Sanitizer4EMS mascot"
+                className="h-full w-full object-contain p-6"
+              />
             </div>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="space-y-6">
@@ -112,7 +114,7 @@ export default function Home() {
             {[
               { icon: Building2, title: "EMS Agencies & Fire", desc: "Safe for apparatus storage. Won't degrade expensive equipment surfaces." },
               { icon: HeartHandshake, title: "Urgent Cares", desc: "Gentle on staff who sanitize dozens of times a shift. Won't dry out skin." },
-              { icon: Shield, title: "Schools & Daycares", desc: "Non-toxic, alcohol-free formula is completely safe for children's hands." },
+              { icon: ShieldCheck, title: "Schools & Daycares", desc: "Non-toxic, alcohol-free formula is completely safe for children's hands." },
               { icon: Droplets, title: "Public Safety", desc: "Reliable protection for law enforcement and municipal workers on patrol." },
               { icon: Package, title: "Corporate Offices", desc: "Bulk gallons keep entire office floors clean without the chemical smell." },
               { icon: HeartHandshake, title: "Families", desc: "Perfect for the car, purse, or backpack. Peace of mind everywhere you go." }

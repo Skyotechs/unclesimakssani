@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import mascotImg from "@/assets/mascot.png";
 import { Head } from "@/components/Layout";
 import { loadStripe } from "@stripe/stripe-js";
 import { Button } from "@/components/ui/button";
@@ -117,10 +118,12 @@ function ProductCard({ product, onCheckout }: { product: Product, onCheckout: (i
 
   return (
     <div className="flex flex-col bg-white border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div className="aspect-square bg-secondary flex items-center justify-center p-6 border-b border-border">
-        <span className="text-muted-foreground font-medium text-center">
-          [Image: {product.name}]
-        </span>
+      <div className="aspect-square bg-secondary flex items-center justify-center overflow-hidden border-b border-border">
+        <img
+          src={mascotImg}
+          alt={product.name}
+          className="h-full w-full object-contain p-4"
+        />
       </div>
       
       <div className="p-6 flex flex-col flex-1">

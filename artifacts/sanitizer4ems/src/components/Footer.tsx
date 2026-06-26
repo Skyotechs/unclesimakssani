@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "wouter";
-import { Shield } from "lucide-react";
+import mascotImg from "@/assets/mascot.png";
 import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 export function Footer() {
@@ -12,9 +12,11 @@ export function Footer() {
           {/* Brand column */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-8 h-8 rounded-md border border-accent/50">
-                <Shield className="h-5 w-5 text-accent" strokeWidth={2.5} />
-              </div>
+              <img
+                src={mascotImg}
+                alt="Sanitizer4EMS mascot"
+                className="h-12 w-auto object-contain"
+              />
               <span className="font-bold text-xl tracking-tight">Sanitizer4EMS</span>
             </div>
             <p className="text-white/80 leading-relaxed pr-4 text-sm">

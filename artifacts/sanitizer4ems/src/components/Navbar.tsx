@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "wouter";
-import { Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import mascotImg from "@/assets/mascot.png";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
@@ -25,13 +26,11 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo / brand */}
           <Link href="/" className="flex items-center gap-3">
-            {/* Logo placeholder — swap the Shield icon for a real <img> once branding is finalized */}
-            <div
-              className="flex items-center justify-center w-10 h-10 rounded-md border-2 border-accent/50"
-              aria-label="Sanitizer4EMS logo placeholder"
-            >
-              <Shield className="h-6 w-6 text-accent" strokeWidth={2.5} />
-            </div>
+            <img
+              src={mascotImg}
+              alt="Sanitizer4EMS mascot"
+              className="h-12 w-auto object-contain"
+            />
             <span className="font-bold text-xl tracking-tight text-white">Sanitizer4EMS</span>
           </Link>
 

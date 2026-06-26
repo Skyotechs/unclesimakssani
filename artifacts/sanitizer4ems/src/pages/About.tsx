@@ -1,7 +1,8 @@
 import React from "react";
 import { Head } from "@/components/Layout";
 import { CTASection } from "@/components/CTASection";
-import { Shield, HeartHandshake, Award } from "lucide-react";
+import { ShieldCheck, HeartHandshake, Award } from "lucide-react";
+import mascotImg from "@/assets/mascot.png";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -50,11 +51,12 @@ export default function About() {
               Sanitizer4EMS was developed as a non-alcohol alternative that provides hospital-grade protection without the burn, the dryness, or the strong chemical odor. What started as a solution for our own crew quickly gained attention from other squads, urgent cares, and eventually, schools and families.
             </p>
           </div>
-          <div className="bg-secondary rounded-2xl aspect-square lg:aspect-[4/3] flex items-center justify-center p-8 border border-border">
-            <div className="text-center text-muted-foreground font-medium">
-              <Shield className="h-16 w-16 mx-auto mb-4 opacity-50" />
-              <p>[Placeholder: Historical/Action shot of founders in EMS gear]</p>
-            </div>
+          <div className="bg-secondary rounded-2xl aspect-square lg:aspect-[4/3] overflow-hidden flex items-center justify-center border border-border">
+            <img
+              src={mascotImg}
+              alt="Sanitizer4EMS mascot"
+              className="h-full w-full object-contain p-6"
+            />
           </div>
         </div>
       </section>
