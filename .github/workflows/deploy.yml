@@ -36,12 +36,14 @@ jobs:
         run: pnpm install
 
       - name: Build site
-        working-directory: artifacts/sanitizer4ems
         env:
           PORT: "3000"
           BASE_PATH: /SimakSani/
           NODE_ENV: production
-        run: pnpm build
+        run: pnpm --filter @workspace/sanitizer4ems run build
+
+      - name: Verify build output
+        run: ls -la artifacts/sanitizer4ems/dist/public
 
       - name: Add 404.html for SPA routing
         run: cp artifacts/sanitizer4ems/dist/public/index.html artifacts/sanitizer4ems/dist/public/404.html
