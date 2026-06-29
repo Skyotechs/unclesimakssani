@@ -30,9 +30,6 @@ export default function Home() {
         {/* Subtle background noise/pattern could go here */}
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-            <span className="inline-block py-1 px-3 rounded-full bg-accent/10 text-accent font-semibold text-sm mb-6 border border-accent/20">
-              Fighting Germs. Giving Back.
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-8">
               Sanitizer Made by <span className="text-accent">EMS Personnel</span>
             </h1>
