@@ -38,7 +38,7 @@ jobs:
       - name: Build site
         env:
           PORT: "3000"
-          BASE_PATH: /SimakSani/
+          BASE_PATH: /SimaksSani/
           NODE_ENV: production
         run: pnpm --filter @workspace/sanitizer4ems run build
 
